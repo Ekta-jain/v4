@@ -124,10 +124,10 @@ TagTemplate.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query ($tag: String!) {
+  query($tag: String!) {
     allMarkdownRemark(
       limit: 2000
-      sort: { frontmatter: { date: DESC } }
+      sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
