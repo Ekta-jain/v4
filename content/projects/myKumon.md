@@ -1,6 +1,6 @@
 ---
 date: '2021-07-01'
-title: 'BlackBuck'
+title: 'My Kumon'
 github: ''
 external: 'http://bit.ly/kumon-instructor'
 tech:

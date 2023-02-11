@@ -1,13 +1,13 @@
 ---
 date: '2021-07-01'
-title: 'BlackBuck'
+title: 'CHARLES & KEITH'
 github: ''
 external: 'https://bit.ly/charls-keith'
 tech:
   - Kotlin
   - MVVM
   - Android
-company: 'CARLES & KEITH'
+company: 'CHARLES & KEITH'
 showInProjects: true
 ---
 
