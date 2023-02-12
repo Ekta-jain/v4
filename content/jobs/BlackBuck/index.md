@@ -7,6 +7,8 @@ range: 'May 2018 - Present'
 url: 'https://www.upstatement.com/'
 ---
 
-- Write modern, performant, maintainable code for a diverse array of client and internal projects
-- Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify
-- Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis
+- Developed a feature for fleet owners to find loads and purchase GPS and Fastag for multiple trucks.
+- Implemented a feature for truck owners to buy GPS and schedule installation time using Kotlin Coroutines and Flow.
+- Integrated Google Maps API to display polyline on maps.
+- Designed and implemented a KYC verification flow that allows users to upload their personal ID.
+- Developed the ability to show trip history for added transparency and ease of use for the users.

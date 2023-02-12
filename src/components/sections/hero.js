@@ -61,13 +61,13 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Ekta Jain.</h2>;
-  const three = <h3 className="big-heading">I build Apps for the Mobile.</h3>;
+  const three = <h3 className="big-heading">I am Unleashing the Power of Android for a Better Tomorrow</h3>;
   const four = (
     <>
       <p>
-        I'm an Android Developer specializing in building exceptional digital experiences using
-        Kotlin & Java. Currently, I'm focused on building India's Largest Trucking Platform{' '}
-        <a href="https://www.blackbuck.com/" target="_blank" rel="noreferrer">
+      With 6 years of expertise in Android development, I specialize in crafting innovative and seamless apps utilizing Java and Kotlin. 
+      Currently, I'm focused on building India's Largest Trucking Platform {' '}
+        <a href="https://bit.ly/blackbuck-android/" target="_blank" rel="noreferrer">
           BlackBuck
         </a>
         .

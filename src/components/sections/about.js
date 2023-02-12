@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Android', 'Java', 'Kotlin', 'Coroutine', 'Compose', 'JetPack Component'];
+  const skills = ['Android', 'Java', 'Kotlin', 'Jetpack Components', 'Compose', 'Unit Testing'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,9 +135,9 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Ekta Jain and I enjoy creating Apps that resolve real world
-              problems. My interest in mobile development started back in 2016 when I decided to
-              learn Java — turns out to be Fun together on devloping mobile applications ^-^
+            Greetings! I am Ekta Jain, a passionate mobile developer driven by the desire to make a difference through technology. 
+            In 2016, I embarked on a journey to master Java and discovered a true love for developing mobile applications that solve real-world problems. 
+            With a focus on innovation and user-centered design, I am dedicated to delivering exceptional mobile experiences. ^-^
             </p>
 
             <p>
@@ -146,15 +146,15 @@ const About = () => {
               <a href="https://www.octalsoftware.com/">Octal</a>,{' '}
               <a href="https://www.ranosys.com/in/">Ranosys</a>, and{' '}
               <a href="https://www.swiggy.com/">Swiggy</a>. My main focus these days is building
-              accessible, online marketplace for logistics transactions,{' '}
-              <a href="https://www.blackbuck.com/">BlackBuck</a> helping customers move anything,
-              from anywhere to everywhere.
+              accessible, revolutionary app,{' '}
+              <a href="https://www.blackbuck.com/">BlackBuck</a> Which can help user to efficiently optimize their route by finding a full truck load through trucking GPS. 
+              and To book loads every day at an affordable price.
             </p>
 
             <p>
-              I also do personal project on <a href="http://github.com/Ekta-jain">Github</a> that
-              covers everything you need to build a web app with the Spotify API using Node &amp;
-              React.
+            "Continuous learning is a cornerstone of my development philosophy. 
+            That's why I actively pursue personal projects and share my knowledge and contributions on <a href="http://github.com/Ekta-jain">Github</a>, 
+            staying up-to-date with the latest and trending topics in the Android community.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>

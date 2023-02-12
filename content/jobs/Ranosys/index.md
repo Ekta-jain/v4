@@ -7,5 +7,8 @@ range: 'May 2019 - June 2021'
 url: 'https://www.ranosys.com/in/'
 ---
 
-- Collaborated with a small team of student designers to spearhead a new brand and design system for Scout’s inaugural student-led design conference at Northeastern
-- Worked closely with designers and management team to develop, document, and manage the conference’s marketing website using Jekyll, Sass, and JavaScript
+- Responsible for the complete lifecycle of Android applications, including design, development, deployment, debugging and maintenance.
+- Worked on projects for clients such as Charles & Keith and Datafornix.
+- Experienced in client management and requirement gathering.
+- Adept at troubleshooting and resolving technical issues to ensure smooth and efficient application deployment and maintenance.
+

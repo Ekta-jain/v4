@@ -7,6 +7,6 @@ range: 'May 2018 - may 2019'
 url: 'https://www.octalsoftware.com/'
 ---
 
-- Developed a fantasy sports game Playing 11 (Listed below) from scratch in Kotlin with MVVM.
-- Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness
-- Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more
+- Expertise in implementing design patterns such as MVP and MVVM.
+- Developed scalable, fantasy sports application i.e Playing11 from scratch, Implemented real-time updates, scoring and user engagement features
+- Explored Constraint Layout, a flexible and powerful layout manager in Android development.
