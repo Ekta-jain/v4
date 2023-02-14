@@ -1,15 +1,14 @@
 ---
 date: '1'
-title: 'Halcyon Theme'
-cover: './halcyon.png'
-github: 'https://github.com/bchiang7/halcyon-site'
-external: 'https://halcyon-theme.netlify.com/'
+title: 'Playing 11'
+cover: './demo.png'
+github: 'https://www.myplaying11.com/'
+external: 'https://www.myplaying11.com/'
 tech:
-  - VS Code
-  - Sublime Text
-  - Atom
-  - iTerm2
-  - Hyper
+  - Android
+  - Kotlin
+  - MVVM
+  - Room DB
 ---
 
-A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode), [Package Control](https://packagecontrol.io/packages/Halcyon%20Theme), [Atom Package Manager](https://atom.io/themes/halcyon-syntax), and [npm](https://www.npmjs.com/package/hyper-halcyon-theme).
+Playing11 is an Indian fantasy sports platform that allows users to play fantasy cricket.Available on [Playing11 website](https://www.myplaying11.com/),is a fantasy sports app where you can create your fantasy team based on real-life matches.

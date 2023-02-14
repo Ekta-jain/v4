@@ -1,10 +1,10 @@
 ---
-date: '2018-04-01'
-title: 'Studio Developer'
-company: 'Scout'
-location: 'Northeastern University'
-range: 'January - April 2018'
-url: 'https://web.northeastern.edu/scout/'
+date: '2019-07-01'
+title: 'Sr Software Engineer'
+company: 'Swiggy'
+location: 'Banglore'
+range: 'July 2021 - Jan 2022'
+url: 'https://www.swiggy.com/'
 ---
 
 - Experienced in Protocol buffers transformations, including sort and filter response.

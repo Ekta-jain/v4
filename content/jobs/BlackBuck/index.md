@@ -1,10 +1,10 @@
 ---
-date: '2018-05-14'
-title: 'Engineer'
-company: 'Upstatement'
-location: 'Boston, MA'
-range: 'May 2018 - Present'
-url: 'https://www.upstatement.com/'
+date: '2022-01-01'
+title: 'Sr Software Engineer'
+company: 'BlackBuck'
+location: 'Bangalore'
+range: 'Jan 2021 - Present'
+url: 'https://www.blackbuck.com/'
 ---
 
 - Developed a feature for fleet owners to find loads and purchase GPS and Fastag for multiple trucks.
