@@ -149,9 +149,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: 'UA-45666519-2',
+        trackingIds: [
+          'GTM-TBB9B4L',
+          'G-PZ5JXJZ9RH',
+        ],
+        gtagConfig:{
+          optimize_id: 'GTM-TBB9B4L'
+        },
       },
     },
   ],
