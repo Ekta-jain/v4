@@ -4,10 +4,9 @@ module.exports = {
   siteMetadata: {
     title: 'Ekta Jain',
     description:
-      'With 6 years of expertise in Android development, ',
-    siteUrl: 'https://brittanychiang.com', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@bchiang7',
+      'With 6 years of expertise in Android development, I have worked with Swiggy, BlackBuck, E-learning, fantasy domain, From past 4 years working with kotlin.',
+    siteUrl: 'https://e4ekta.netlify.app/', // No trailing slash allowed!
+    image: '/og.jpeg' // Path to your image you placed in the 'static' folder
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
