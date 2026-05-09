@@ -70,8 +70,6 @@
     "@babel/core": "^7.23.0",
     "@babel/eslint-parser": "^7.23.0",
     "@babel/preset-react": "^7.23.0",
-    "@upstatement/eslint-config": "^1.0.0",
-    "@upstatement/prettier-config": "^1.0.0",
     "babel-preset-gatsby": "^3.16.0",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
