@@ -4,6 +4,8 @@
 
 Yes, you can fork this repo. Please give me proper credit by linking back to [brittanychiang.com](https://brittanychiang.com). Thanks!
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eef62147-810e-489f-b5ef-e9b21e2aa4e3/deploy-status)](https://app.netlify.com/projects/e4ekta/deploys)
+
 ## 🛠 Installation & Set Up
 
 1. Install the Gatsby CLI
