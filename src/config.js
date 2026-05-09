@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/ekta-jain-androiddeveloper/',
+      url: 'https://www.linkedin.com/in/droid-ekta-jain/',
     },
   ],
 
