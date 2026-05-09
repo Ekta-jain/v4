@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm outdated *)",
+      "WebSearch",
+      "WebFetch(domain:www.gatsbyjs.com)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:dev.to)",
+      "Bash(npm install *)",
+      "Bash(bun install *)",
+      "Bash(which bun *)",
+      "Read(//Users/sushiljainam/.bun/bin/**)",
+      "Bash(curl -fsSL https://bun.sh/install)",
+      "Bash(bash)",
+      "Bash(~/.bun/bin/bun install *)",
+      "Bash(~/.bun/bin/bun pm *)",
+      "Bash(~/.bun/bin/bun run *)",
+      "Bash(npm run *)"
+    ]
+  }
+}

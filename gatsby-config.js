@@ -1,6 +1,7 @@
 const config = require('./src/config');
 
 module.exports = {
+  trailingSlash: `never`,
   siteMetadata: {
     title: 'Ekta Jain',
     description:
@@ -76,7 +77,6 @@ module.exports = {
               maxWidth: 700,
               linkImagesToOriginal: true,
               quality: 90,
-              tracedSVG: { color: config.colors.green },
             },
           },
           {
