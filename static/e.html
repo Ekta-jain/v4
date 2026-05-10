@@ -6,254 +6,260 @@
 <title>Ekta Jain — Resume</title>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-  /* ── Reset & Base ── */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --blue: #2079C7;
+    --blue:  #2079C7;
     --black: #000000;
-    --dark: #202124;
-    --mid: #434343;
-    --grey: #666666;
+    --dark:  #202124;
+    --mid:   #434343;
+    --grey:  #666666;
     --green: #38761D;
-    --body-font: 'Open Sans', sans-serif;
-    --base: 8.5pt;
-    --h1-size: 10.5pt;
-    --h2-size: 9pt;
-    --h3-size: 8pt;
-    --name-size: 22pt;
-    --sub-size: 9.5pt;
+    --font:  'Open Sans', sans-serif;
+    /* Exact page margins from docx: top=10.2mm bottom=7.6mm left/right=15.2mm */
+    --pg-top:   10.2mm;
+    --pg-btm:   7.6mm;
+    --pg-side:  15.2mm;
+    /* Cell padding: 144 twips = 2.54mm ≈ 7.2pt */
+    --cell-pad: 7.2pt;
   }
 
   body {
-    font-family: var(--body-font);
-    font-size: var(--base);
+    font-family: var(--font);
+    font-size: 8.5pt;
     color: var(--black);
-    background: #fff;
-    line-height: 1.35;
+    background: #f0f0f0;
+    line-height: 1.38;
   }
 
-  /* ── Page wrapper — A4 ── */
+  /* ── A4 page shell ── */
   .page {
     width: 210mm;
     min-height: 297mm;
-    margin: 0 auto;
+    margin: 8mm auto;
     background: #fff;
+    padding: var(--pg-top) var(--pg-side) var(--pg-btm);
+    /* prevent accidental overflow */
+    overflow: hidden;
   }
 
-  /* ── HEADER ROW ── */
-  .header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-bottom: 2px solid var(--blue);
-    padding: 10px 14px 8px 14px;
+  /* ═══════════════════════════════
+     HEADER TABLE ROW  (row 0)
+     Col 0: 66.5% | Col 1: 33.5%
+  ═══════════════════════════════ */
+  .hdr-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    /* No borders — matches docx */
+    border: none;
+    margin-bottom: 0;
   }
-  .header-left .name {
-    font-size: var(--name-size);
+  .hdr-table td {
+    border: none;
+    vertical-align: top;
+    padding: var(--cell-pad);
+  }
+  .hdr-table td:first-child { width: 66.5%; }
+  .hdr-table td:last-child  { width: 33.5%; }
+
+  /* Name */
+  .name {
+    font-size: 36pt;          /* Title style: 72 half-pts */
     font-weight: 700;
     color: var(--black);
-    line-height: 1.1;
-    letter-spacing: -0.3px;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
   }
-  .header-left .title {
-    font-size: var(--sub-size);
+  /* Subtitle */
+  .subtitle {
+    font-size: 9.5pt;
     color: var(--black);
-    margin-top: 2px;
+    margin-top: 3pt;          /* Title after=6pt /2 */
+    line-height: 1.38;
   }
-  .header-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 2px;
+
+  /* Contact column */
+  .contact {
     font-size: 8pt;
     color: var(--black);
+    text-align: right;
+    line-height: 1.6;
   }
-  .header-right a {
-    color: var(--blue);
-    text-decoration: none;
+  .contact a { color: var(--blue); text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
+
+  /* ═══════════════════════════════
+     BODY TABLE ROW  (row 1)
+  ═══════════════════════════════ */
+  .body-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: none;
   }
-  .header-right a:hover { text-decoration: underline; }
-
-  /* ── BODY: 2-column ── */
-  .body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    padding: 0 14px 8px 14px;
+  .body-table td {
+    border: none;             /* No visible borders */
+    vertical-align: top;
+    padding: var(--cell-pad);
   }
+  .body-table td:first-child { width: 66.5%; }
+  .body-table td:last-child  { width: 33.5%; }
 
-  /* column divider */
-  .col-left { padding-right: 10px; border-right: 1px solid #e0e0e0; }
-  .col-right { padding-left: 10px; }
-
-  /* ── Section headings ── */
-  .section-title {
-    font-size: var(--h1-size);
+  /* ── Section headings (Heading 1) ──
+     color blue, bold, ~10.5pt, before=30pt, line=240=single */
+  h1 {
+    font-size: 10.5pt;
     font-weight: 700;
     color: var(--blue);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 10px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid #d0d0d0;
-    padding-bottom: 2px;
+    letter-spacing: 0.4px;
+    line-height: 1.0;
+    margin-top: 30pt;         /* before=600 twips = 30pt */
+    margin-bottom: 3pt;
+    /* No border lines — user request */
   }
-  .section-title:first-child { margin-top: 8px; }
+  h1:first-child { margin-top: 4pt; }
 
-  /* ── Summary ── */
-  .summary p {
-    font-size: var(--base);
-    line-height: 1.4;
-    margin-bottom: 2px;
-  }
-  .summary p b { color: var(--black); }
-
-  /* ── Experience entries ── */
-  .exp-block { margin-bottom: 6px; }
-
-  .exp-company {
-    font-size: var(--h2-size);
+  /* ── Company / Project headings (Heading 2) ──
+     bold black, 11pt, before=16pt */
+  h2 {
+    font-size: 11pt;
     font-weight: 700;
     color: var(--black);
-    margin-top: 6px;
     line-height: 1.3;
+    margin-top: 16pt;         /* before=320 twips = 16pt */
+    margin-bottom: 0;
   }
-  .exp-company a { color: var(--black); text-decoration: none; }
-  .exp-company a:hover { color: var(--blue); }
-  .exp-company .role { font-weight: 400; font-style: italic; }
-
-  .exp-date {
-    font-size: var(--h3-size);
-    color: var(--grey);
-    margin-bottom: 2px;
-    font-style: italic;
-  }
-
-  .exp-bullets { list-style: none; padding: 0; }
-  .exp-bullets li {
-    font-size: var(--base);
-    line-height: 1.38;
-    padding-left: 8px;
-    position: relative;
-    margin-bottom: 1px;
-  }
-  .exp-bullets li::before {
-    content: '–';
-    position: absolute;
-    left: 0;
-    color: var(--grey);
-  }
-  .exp-bullets li b { color: var(--black); }
-
-  /* ── Projects ── */
-  .project-block { margin-bottom: 5px; }
-  .project-title {
-    font-size: var(--h2-size);
-    font-weight: 700;
-    color: var(--black);
-    margin-top: 5px;
-  }
-  .project-title a { color: var(--black); text-decoration: none; }
-  .project-title a:hover { color: var(--blue); }
-  .project-title .badge {
+  h2 a { color: var(--black); text-decoration: none; }
+  h2 a:hover { color: var(--blue); }
+  h2 .role { font-weight: 400; font-style: italic; }
+  h2 .badge {
     font-size: 8pt;
     font-weight: 600;
     color: var(--blue);
     text-transform: uppercase;
+    font-style: normal;
   }
-  .project-desc {
-    font-size: var(--base);
+
+  /* ── Date line (Heading 3) ──
+     grey italic, 8pt, before=5pt after=5pt */
+  .date-line {
+    font-size: 8pt;
+    color: var(--grey);
+    font-style: italic;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
     line-height: 1.38;
-    margin-top: 1px;
   }
-  .project-desc b { color: var(--black); }
 
-  /* ── Right column sections ── */
-  .skills-list {
-    font-size: var(--base);
-    line-height: 1.5;
+  /* ── Body paragraphs ── */
+  p {
+    font-size: 8.5pt;
+    line-height: 1.38;
+    margin: 0;
+  }
+  p + p { margin-top: 3pt; }
+
+  /* ── Bullet list — dash style like docx ── */
+  ul.bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.bullets li {
+    font-size: 8.5pt;
+    line-height: 1.38;
+    padding-left: 9pt;
+    position: relative;
+    margin-bottom: 1.5pt;
+  }
+  ul.bullets li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
     color: var(--black);
   }
 
-  .edu-block { margin-bottom: 4px; }
-  .edu-block .degree {
-    font-size: var(--base);
-    font-weight: 700;
-    color: var(--dark);
-  }
-  .edu-block .inst {
-    font-size: var(--base);
-    color: var(--black);
-  }
+  /* ── Awards ── */
+  .award { margin-bottom: 3pt; font-size: 8.5pt; line-height: 1.38; }
+  .award-name { font-weight: 700; color: var(--green); }
 
-  .award-item { margin-bottom: 3px; font-size: var(--base); }
-  .award-item .award-name {
-    font-weight: 700;
-    color: var(--green);
-  }
+  /* ── Right col skill/edu/interest text ── */
+  .skills-text { font-size: 8.5pt; line-height: 1.5; }
 
-  .interests { font-size: var(--base); line-height: 1.5; }
-  .interests b { font-weight: 700; }
+  .edu-entry { margin-bottom: 5pt; font-size: 8.5pt; line-height: 1.4; }
+  .edu-degree { font-weight: 700; color: var(--dark); }
+  .edu-grey   { color: var(--grey); }
+  .edu-mid    { color: var(--mid); }
 
-  /* ── Other Projects (right col) ── */
-  .other-proj-title {
-    font-size: var(--h1-size);
+  /* ── "OTHER PROJECTS" heading in right col (blue, same style as h1) ── */
+  .h1-blue {
+    font-size: 10.5pt;
     font-weight: 700;
     color: var(--blue);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 8px;
-    margin-bottom: 3px;
-    border-bottom: 1px solid #d0d0d0;
-    padding-bottom: 2px;
-  }
-  .mini-proj { margin-bottom: 4px; }
-  .mini-proj .mp-title {
-    font-size: var(--h2-size);
-    font-weight: 700;
-    color: var(--black);
-  }
-  .mini-proj .mp-title a { color: var(--black); text-decoration: none; }
-  .mini-proj .mp-title a:hover { color: var(--blue); }
-  .mini-proj .mp-badge {
-    font-weight: 700;
-    color: var(--black);
-  }
-  .mini-proj .mp-desc {
-    font-size: var(--base);
-    line-height: 1.38;
+    letter-spacing: 0.4px;
+    margin-top: 30pt;
+    margin-bottom: 3pt;
+    line-height: 1.0;
   }
 
-  /* ── Print styles ── */
+  .mini-proj { margin-bottom: 6pt; }
+  .mini-proj-title { font-size: 11pt; font-weight: 700; color: var(--black); line-height: 1.3; margin-top: 16pt; }
+  .mini-proj-title a { color: var(--black); text-decoration: none; }
+  .mini-proj-title a:hover { color: var(--blue); }
+  .mini-proj-desc { font-size: 8.5pt; line-height: 1.38; }
+
+  /* ═══════════════════════════════
+     PRINT
+  ═══════════════════════════════ */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
   @media print {
-    @page {
-      size: A4;
+    body {
+      background: #fff;
       margin: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
-    body { margin: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .page {
       width: 210mm;
       min-height: 297mm;
       margin: 0;
+      padding: var(--pg-top) var(--pg-side) var(--pg-btm);
+      box-shadow: none;
     }
+    .print-btn { display: none; }
+
+    /* Prevent mid-entry page breaks */
+    h2, .mini-proj-title { page-break-after: avoid; break-after: avoid; }
+    .date-line           { page-break-before: avoid; break-before: avoid; }
+    ul.bullets li        { page-break-inside: avoid; break-inside: avoid; }
+    .mini-proj           { page-break-inside: avoid; break-inside: avoid; }
+    /* Force break ONLY before Projects section if needed */
+    .page-break-before   { page-break-before: always; break-before: page; }
   }
 
-  /* ── Screen helper (shows on screen, hidden on print) ── */
+  /* ── Screen-only button ── */
   .print-btn {
     position: fixed;
     top: 12px; right: 12px;
     background: var(--blue);
     color: #fff;
     border: none;
-    padding: 7px 16px;
-    font-family: var(--body-font);
+    padding: 7px 18px;
+    font-family: var(--font);
     font-size: 9pt;
     cursor: pointer;
     border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.25);
     z-index: 999;
   }
-  @media print { .print-btn { display: none; } }
+  .print-btn:hover { background: #1760a0; }
 </style>
 </head>
 <body>
@@ -262,30 +268,33 @@
 
 <div class="page">
 
-  <!-- ═══════════ HEADER ═══════════ -->
-  <div class="header">
-    <div class="header-left">
-      <div class="name">Ekta Jain</div>
-      <div class="title">Senior Android Engineer &nbsp;·&nbsp; Kotlin &nbsp;·&nbsp; Java</div>
-    </div>
-    <div class="header-right">
-      <span>+91-9782474753</span>
-      <a href="mailto:jainekta9876@gmail.com">jainekta9876@gmail.com</a>
-      <a href="https://e4ekta.netlify.app/" target="_blank">Portfolio Website</a>
-      <a href="https://bit.ly/linked-ekta" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Ekta-jain" target="_blank">GitHub</a>
-    </div>
-  </div>
+  <!-- ══════ HEADER ROW ══════ -->
+  <table class="hdr-table">
+    <tr>
+      <td>
+        <div class="name">Ekta Jain</div>
+        <div class="subtitle">Senior Android Engineer &nbsp;·&nbsp; Kotlin &nbsp;·&nbsp; Java</div>
+      </td>
+      <td>
+        <div class="contact">
+          +91-9782474753<br>
+          <a href="mailto:jainekta9876@gmail.com">jainekta9876@gmail.com</a><br>
+          <a href="https://e4ekta.netlify.app/" target="_blank">Portfolio Website</a><br>
+          <a href="https://bit.ly/linked-ekta" target="_blank">LinkedIn</a><br>
+          <a href="https://github.com/Ekta-jain" target="_blank">GitHub</a>
+        </div>
+      </td>
+    </tr>
+  </table>
 
-  <!-- ═══════════ BODY ═══════════ -->
-  <div class="body">
+  <!-- ══════ BODY ROW ══════ -->
+  <table class="body-table">
+    <tr>
 
-    <!-- ─── LEFT COLUMN ─── -->
-    <div class="col-left">
+      <!-- ── LEFT COLUMN ── -->
+      <td>
 
-      <!-- CAREER SUMMARY -->
-      <div class="section-title">Career Summary</div>
-      <div class="summary">
+        <h1>Career Summary</h1>
         <p>
           <b>9 years in Android</b> — <b>10+ apps shipped to the Play Store</b>, used by millions.
           Built across consumer (<b>Swiggy</b>), fleet tech (<b>BlackBuck</b>), and IoT (<b>Kenmore</b>);
@@ -293,158 +302,129 @@
           <b>unit test coverage to 85%</b> at scale. Kotlin-native, architecture-first, and increasingly
           pairing that with AI-assisted workflows to ship faster while keeping the architecture clean.
         </p>
-      </div>
 
-      <!-- EXPERIENCE -->
-      <div class="section-title">Experience <span style="font-size:8pt;font-weight:400;color:var(--grey)">(9+ years)</span></div>
+        <h1>Experience <span style="font-size:8pt;font-weight:400;color:var(--grey)">(9+ years)</span></h1>
 
-      <!-- Sears -->
-      <div class="exp-block">
-        <div class="exp-company">Sears Global Technologies India, Remote &mdash; <span class="role">Sr. Software Engineer</span></div>
-        <div class="exp-date">Feb 2023 – Present</div>
-        <ul class="exp-bullets">
+        <!-- Sears -->
+        <h2>Sears Global Technologies India, Remote &mdash; <span class="role">Sr. Software Engineer</span></h2>
+        <div class="date-line">Feb 2023 – Present</div>
+        <ul class="bullets">
           <li>Developed and maintained Android applications for <b>Kenmore Smart</b> (IoT appliance control) and <b>Sears Kairos Field Force</b> — covering schedule-based automation and real-time device monitoring.</li>
           <li>Led and mentored teams of 2–3 junior engineers — defined coding standards, conducted code reviews, drove adoption of clean MVVM architecture.</li>
           <li>Accelerated delivery using AI-assisted tools (Windsurf, Antigravity AI) with targeted prompt engineering — achieving pixel-perfect Figma-to-code implementation without sacrificing architecture quality.</li>
         </ul>
-      </div>
 
-      <!-- BlackBuck -->
-      <div class="exp-block">
-        <div class="exp-company"><a href="https://www.blackbuck.com/" target="_blank">BlackBuck</a>, Bangalore &mdash; <span class="role">Sr. Software Engineer</span></div>
-        <div class="exp-date">Jan 2022 – Dec 2022 &nbsp;|&nbsp; Embedded through Recro.IO</div>
-        <ul class="exp-bullets">
+        <!-- BlackBuck -->
+        <h2><a href="https://www.blackbuck.com/" target="_blank">BlackBuck</a>, Bangalore &mdash; <span class="role">Sr. Software Engineer</span></h2>
+        <div class="date-line">Jan 2022 – Dec 2022 &nbsp;|&nbsp; Embedded through Recro.IO</div>
+        <ul class="bullets">
           <li>Owned the Buy GPS feature end-to-end using Kotlin Coroutines and Flow; built KYC verification flow and integrated Google Maps for live trip history.</li>
           <li>Migrated codebase to Hilt DI; integrated payment flows via Stripe, CashFree, and PayPal.</li>
         </ul>
-      </div>
 
-      <!-- Swiggy -->
-      <div class="exp-block">
-        <div class="exp-company"><a href="https://www.swiggy.com/" target="_blank">Swiggy</a>, Bangalore &mdash; <span class="role">Sr. Software Engineer</span></div>
-        <div class="exp-date">July 2021 – Jan 2022 &nbsp;|&nbsp; Embedded through Recro.IO</div>
-        <ul class="exp-bullets">
+        <!-- Swiggy -->
+        <h2><a href="https://www.swiggy.com/" target="_blank">Swiggy</a>, Bangalore &mdash; <span class="role">Sr. Software Engineer</span></h2>
+        <div class="date-line">July 2021 – Jan 2022 &nbsp;|&nbsp; Embedded through Recro.IO</div>
+        <ul class="bullets">
           <li>Revamped sort/filter across Restaurant Collection, Home, and Food pages — directly impacting the core discovery experience for millions of daily users.</li>
           <li>Used Android Profiler to diagnose memory leaks and resolve performance bottlenecks; handled Protocol Buffer response parsing and transformation.</li>
           <li><b>Achieved 85% unit test coverage</b> using Mockito/JUnit; established the testing baseline adopted by the feature team.</li>
         </ul>
-      </div>
 
-      <!-- Ranosys -->
-      <div class="exp-block">
-        <div class="exp-company">Ranosys Technologies, Jaipur &mdash; <span class="role">Sr. Software Engineer</span></div>
-        <div class="exp-date">May 2019 – June 2021</div>
-        <ul class="exp-bullets">
+        <!-- Ranosys -->
+        <h2>Ranosys Technologies, Jaipur &mdash; <span class="role">Sr. Software Engineer</span></h2>
+        <div class="date-line">May 2019 – June 2021</div>
+        <ul class="bullets">
           <li>Sole client-facing technical lead: independently managed requirement gathering, sprint planning, and delivery for international clients.</li>
           <li><b>Reduced app crash rate by ~25%</b> via Crashlytics triage and targeted refactoring across multiple production apps.</li>
           <li>Implemented live video using Sinch and Wowza.</li>
         </ul>
-      </div>
 
-      <!-- Octal -->
-      <div class="exp-block">
-        <div class="exp-company">Octal IT Solution, Jaipur &mdash; <span class="role">Software Developer</span></div>
-        <div class="exp-date">May 2018 – May 2019</div>
-        <ul class="exp-bullets">
+        <!-- Octal -->
+        <h2>Octal IT Solution, Jaipur &mdash; <span class="role">Software Developer</span></h2>
+        <div class="date-line">May 2018 – May 2019</div>
+        <ul class="bullets">
           <li>Built <b>Playing 11</b> (fantasy cricket app) from scratch in Kotlin/MVVM — UI, Retrofit APIs, Firebase crash reporting, and Facebook/Google social login.</li>
           <li>Architected Android applications with a security-first mindset — implementing ProGuard obfuscation, runtime permission handling, and secure API communication.</li>
         </ul>
-      </div>
 
-      <!-- Archive -->
-      <div class="exp-block">
-        <div class="exp-company">Archive Infotech Pvt. Ltd., Jaipur &mdash; <span class="role">Android Developer</span></div>
-        <div class="exp-date">Dec 2016 – May 2018</div>
-        <ul class="exp-bullets">
+        <!-- Archive -->
+        <h2>Archive Infotech Pvt. Ltd., Jaipur &mdash; <span class="role">Android Developer</span></h2>
+        <div class="date-line">Dec 2016 – May 2018</div>
+        <ul class="bullets">
           <li>Gained foundational Android expertise: design patterns, social integrations, and Google Play publishing across multiple client apps.</li>
         </ul>
-      </div>
 
-      <!-- PROJECTS -->
-      <div class="section-title">Projects</div>
+        <h1>Projects</h1>
 
-      <div class="project-block">
-        <div class="project-title"><a href="http://bit.ly/4uB9Vhm" target="_blank">Kenmore Smart</a> &mdash; IoT Home Appliance Control App &nbsp;<span class="badge">Kotlin</span></div>
-        <div class="project-desc">Android application enabling users to <b>link, remotely monitor, and control</b> Kenmore Smart appliances from a single interface. Implemented schedule-based automation and routine-driven personalisation.</div>
-      </div>
+        <h2><a href="http://bit.ly/4uB9Vhm" target="_blank">Kenmore Smart</a> &mdash; IoT Home Appliance Control App &nbsp;<span class="badge">Kotlin</span></h2>
+        <p>Android application enabling users to <b>link, remotely monitor, and control</b> Kenmore Smart appliances from a single interface. Implemented schedule-based automation and routine-driven personalisation.</p>
 
-      <div class="project-block">
-        <div class="project-title"><a href="https://bit.ly/blackbuck-android" target="_blank">BlackBuck BOSS</a> &mdash; Fleet Management Platform &nbsp;<span class="badge">Kotlin</span></div>
-        <div class="project-desc">Fleet owners can find a load, purchase GPS &amp; FASTag for multiple trucks. My Role: developed the Buy GPS feature with <b>Kotlin Coroutine and Flow</b>, KYC verification flow, trip history, integrated <b>Google Maps API</b>.</div>
-      </div>
+        <h2><a href="https://bit.ly/blackbuck-android" target="_blank">BlackBuck BOSS</a> &mdash; Fleet Management Platform &nbsp;<span class="badge">Kotlin</span></h2>
+        <p>Fleet owners can find a load, purchase GPS &amp; FASTag for multiple trucks. My Role: developed the Buy GPS feature with <b>Kotlin Coroutine and Flow</b>, KYC verification flow, trip history, integrated <b>Google Maps API</b>.</p>
 
-      <div class="project-block">
-        <div class="project-title"><a href="https://bit.ly/swiggy-android" target="_blank">Swiggy</a> &mdash; Consumer App &nbsp;<span class="badge">Kotlin</span></div>
-        <div class="project-desc">Order Food, Groceries and other essentials online. My Role: <b>Used Protocol Buffers response</b> and transformed to get response; worked with <b>Android Profiler</b> for App Optimization; home and food page; <b>achieved UT coverage by 85%</b> using Mockito/JUnit.</div>
-      </div>
+        <h2><a href="https://bit.ly/swiggy-android" target="_blank">Swiggy</a> &mdash; Consumer App &nbsp;<span class="badge">Kotlin</span></h2>
+        <p>Order Food, Groceries and other essentials online. My Role: <b>Used Protocol Buffers response</b> and transformed to get response; worked with <b>Android Profiler</b> for App Optimization; home and food page; <b>achieved UT coverage by 85%</b> using Mockito/JUnit.</p>
 
-      <div class="project-block">
-        <div class="project-title"><a href="https://bit.ly/sdk-datafornix" target="_blank">Datafornix</a> &mdash; Offline ID Scanner (Internal App) &nbsp;<span class="badge">Kotlin</span></div>
-        <div class="project-desc">Created SDK using <b>CameraX</b> to scan MRZ and extract data from IDs such as identity documents, passports, and driving licenses. Challenges faced: Offline image processing with great performance.</div>
-      </div>
+        <h2><a href="https://bit.ly/sdk-datafornix" target="_blank">Datafornix</a> &mdash; Offline ID Scanner (Internal App) &nbsp;<span class="badge">Kotlin</span></h2>
+        <p>Created SDK using <b>CameraX</b> to scan MRZ and extract data from IDs such as identity documents, passports, and driving licenses. Challenges faced: Offline image processing with great performance.</p>
 
-    </div><!-- /col-left -->
+      </td>
 
-    <!-- ─── RIGHT COLUMN ─── -->
-    <div class="col-right">
+      <!-- ── RIGHT COLUMN ── -->
+      <td>
 
-      <!-- SKILLS -->
-      <div class="section-title">Skills &amp; Tools</div>
-      <div class="skills-list">
-        Core Java, Android, Kotlin, Jetpack Compose, C++, Node.js, MySQL, SQLite, Room, Firebase, JUnit, Mockito Testing.<br>
-        Git, SVN, Jira, Agile Process.<br>
-        CI/CD: Jenkins, SonarQube.
-      </div>
+        <h1>Skills &amp; Tools</h1>
+        <p class="skills-text">
+          Core Java, Android, Kotlin, Jetpack Compose, C++, Node.js, MySQL, SQLite, Room, Firebase, JUnit, Mockito Testing.<br>
+          Git, SVN, Jira, Agile Process.<br>
+          CI/CD: Jenkins, SonarQube.
+        </p>
 
-      <!-- EDUCATION -->
-      <div class="section-title">Education</div>
-      <div class="edu-block">
-        <div class="degree">B.Tech. (2016)</div>
-        <div class="inst">Rajasthan Technical University, Kota<br>
-        <span style="color:var(--grey)">(70% in Computer Science &amp; Engineering, GWECA Ajmer)</span></div>
-      </div>
-      <div class="edu-block" style="margin-top:4px">
-        <div class="inst"><span style="color:var(--mid)">10+2 (2012)</span> — MLV MA Sr. Sec. School, Bhilwara<br>
-        <span style="color:var(--grey)">(<span style="color:var(--mid)">86% in PCM</span>)</span></div>
-      </div>
+        <h1>Education</h1>
+        <div class="edu-entry">
+          <span class="edu-degree">B.Tech. (2016)</span>
+          <span> — Rajasthan Technical University, Kota</span><br>
+          <span class="edu-grey">(70% in Computer Science &amp; Engineering, GWECA Ajmer)</span>
+        </div>
+        <div class="edu-entry">
+          <span class="edu-mid">10+2 (2012)</span>
+          <span> — MLV MA Sr. Sec. School, Bhilwara</span><br>
+          <span class="edu-grey">(<span class="edu-mid">86% in PCM</span>)</span>
+        </div>
 
-      <!-- AWARDS -->
-      <div class="section-title">Awards</div>
-      <div class="award-item">
-        <span class="award-name">Exceeding Expectation Award</span> — Q2 2020, top-of-range award at <b>Ranosys</b>
-      </div>
-      <div class="award-item">
-        92.85 in Problem Solving in pH Test by <b>eLitmus</b>
-      </div>
+        <h1>Awards</h1>
+        <div class="award">
+          <span class="award-name">Exceeding Expectation Award</span> — Q2 2020 — top of the range award at <b>Ranosys</b>
+        </div>
+        <div class="award">
+          92.85 in Problem Solving in pH Test by <b>eLitmus</b>
+        </div>
 
-      <!-- INTERESTS -->
-      <div class="section-title">Other Interests</div>
-      <div class="interests">
-        Badminton, <b>LeetCode Problem Solving</b>, Rubik's Cube Solving.
-      </div>
+        <h1>Other Interests</h1>
+        <p>Badminton, <b>LeetCode Problem Solving</b>, Rubik's Cube Solving.</p>
 
-      <!-- OTHER PROJECTS -->
-      <div class="other-proj-title">Other Projects</div>
+        <div class="h1-blue">Other Projects</div>
 
-      <div class="mini-proj">
-        <div class="mp-title"><a href="https://bit.ly/charls-keith" target="_blank">Charles &amp; Keith</a> &nbsp;<span class="mp-badge">| Java</span></div>
-        <div class="mp-desc">E-commerce app for Singaporean fashion brand — product showcase, cart &amp; checkout with Room DB offline storage.</div>
-      </div>
+        <div class="mini-proj">
+          <div class="mini-proj-title"><a href="https://bit.ly/charls-keith" target="_blank">Charles &amp; Keith</a> &nbsp;<b>| Java</b></div>
+          <div class="mini-proj-desc">E-commerce app for Singaporean fashion brand — product showcase, cart &amp; checkout with Room DB offline storage.</div>
+        </div>
 
-      <div class="mini-proj">
-        <div class="mp-title"><a href="https://bit.ly/kumon-learner" target="_blank">MyKumon</a> &nbsp;<span class="mp-badge">| Kotlin</span></div>
-        <div class="mp-desc">Dual-app eLearning suite (student + instructor) with audio-based learning, dashboard UI &amp; ConstraintLayout.</div>
-      </div>
+        <div class="mini-proj">
+          <div class="mini-proj-title"><a href="https://bit.ly/kumon-learner" target="_blank">MyKumon</a> &nbsp;<b>| Kotlin</b></div>
+          <div class="mini-proj-desc">Dual-app eLearning suite (student + instructor) with audio-based learning, dashboard UI &amp; ConstraintLayout.</div>
+        </div>
 
-      <div class="mini-proj">
-        <div class="mp-title"><a href="http://bit.ly/octal-playing11" target="_blank">Playing 11</a> &nbsp;<span class="mp-badge">| Kotlin</span></div>
-        <div class="mp-desc">Fantasy cricket platform — built UI, Retrofit APIs, Firebase crash reporting &amp; social login.</div>
-      </div>
+        <div class="mini-proj">
+          <div class="mini-proj-title"><a href="http://bit.ly/octal-playing11" target="_blank">Playing 11</a> &nbsp;<b>| Kotlin</b></div>
+          <div class="mini-proj-desc">Fantasy cricket platform — built UI, Retrofit APIs, Firebase crash reporting &amp; social login.</div>
+        </div>
 
-    </div><!-- /col-right -->
+      </td>
+    </tr>
+  </table>
 
-  </div><!-- /body -->
 </div><!-- /page -->
-
 </body>
 </html>
