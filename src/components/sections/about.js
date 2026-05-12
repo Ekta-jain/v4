@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = [‘Kotlin’, ‘Java’, ‘Jetpack Compose’, ‘Coroutines & Flow’, ‘Hilt / DI’, ‘CameraX’, ‘Room’, ‘JUnit / Mockito’, ‘Retrofit’, ‘WorkManager’];
+  const skills = ['Kotlin', 'Java', 'Jetpack Compose', 'Coroutines & Flow', 'Hilt / DI', 'CameraX', 'Room', 'JUnit / Mockito', 'Retrofit', 'WorkManager'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,27 +135,27 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              I’m a Senior Android Engineer with 9 years of experience shipping apps used by millions —
-              across consumer food delivery ({‘ ‘}
-              <a href="https://www.swiggy.com/">Swiggy</a>), fleet logistics ({‘ ‘}
-              <a href="https://www.blackbuck.com/">BlackBuck</a>), and IoT appliance control ({‘ ‘}
+              I'm a Senior Android Engineer with 9 years of experience shipping apps used by millions —
+              across consumer food delivery ({' '}
+              <a href="https://www.swiggy.com/">Swiggy</a>), fleet logistics ({' '}
+              <a href="https://www.blackbuck.com/">BlackBuck</a>), and IoT appliance control ({' '}
               <a href="https://www.sears.com/en_us/dap/kenmore-smart-appliances.html">Kenmore Smart</a>).
             </p>
 
             <p>
               I wrote an offline MRZ-scanning SDK from scratch using CameraX, cut crash rates by 25%,
-              and pushed unit test coverage to 85% at scale. These days I’m at{‘ ‘}
+              and pushed unit test coverage to 85% at scale. These days I'm at{' '}
               <a href="https://www.searsholdings.com/">Sears Global Technologies</a> leading a team,
               and increasingly pairing Kotlin-native, architecture-first development with AI-assisted
               workflows (Windsurf, Antigravity AI) to ship faster while keeping the architecture clean.
             </p>
 
             <p>
-              I share projects and contributions on{‘ ‘}
+              I share projects and contributions on{' '}
               <a href="http://github.com/Ekta-jain">GitHub</a> and stay active in the Android community.
             </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>Here are a few technologies I've been working with recently:</p>
           </div>
 
           <ul className="skills-list">
