@@ -6,11 +6,10 @@ github: 'https://play.google.com/store/apps/details?id=com.kumon.mykumon&hl=en_I
 external: 'https://play.google.com/store/apps/details?id=com.kumon.mykumon&hl=en_IN&gl=US'
 
 tech:
-  - Android
   - Kotlin
-  - Room Db
-  - Coroutine
-  - Flow
+  - Android
+  - ConstraintLayout
+  - Retrofit
 ---
 
-My Kumon : E-learning solution designed especially for KUMON Students to connect with KUMON learning anytime, anywhere!
+Dual-app eLearning suite (student + instructor) with audio-based learning, dashboard UI, and ConstraintLayout-driven interfaces. Built both apps end-to-end from scratch.

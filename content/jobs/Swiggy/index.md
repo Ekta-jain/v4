@@ -1,13 +1,12 @@
 ---
-date: '2019-07-01'
-title: 'Sr Software Engineer'
+date: '2021-07-01'
+title: 'Sr. Software Engineer'
 company: 'Swiggy'
-location: 'Banglore'
+location: 'Bangalore'
 range: 'July 2021 - Jan 2022'
 url: 'https://www.swiggy.com/'
 ---
 
-- Experienced in Protocol buffers transformations, including sort and filter response.
-- Successfully optimized app performance by 20% through efficient coding practices.
-- Written unit test cases using Mockito for reliable and efficient testing.
-- Demonstrated ability to deliver high-quality and optimized code.
+- Revamped sort/filter across Restaurant Collection, Home, and Food pages — directly impacting core discovery experience for millions of daily users.
+- Used Android Profiler to diagnose memory leaks and resolve performance bottlenecks; handled Protocol Buffer response parsing and transformation.
+- Achieved 85% unit test coverage using Mockito/JUnit; established the testing baseline adopted by the feature team.

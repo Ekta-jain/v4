@@ -1,12 +1,11 @@
 ---
-date: '2018-05-210'
-title: 'Software Engineer'
-company: 'Octal It Solution'
+date: '2018-05-01'
+title: 'Software Developer'
+company: 'Octal IT Solution'
 location: 'Jaipur'
-range: 'May 2018 - may 2019'
+range: 'May 2018 - May 2019'
 url: 'https://www.octalsoftware.com/'
 ---
 
-- Expertise in implementing design patterns such as MVP and MVVM.
-- Developed scalable, fantasy sports application i.e Playing11 from scratch, Implemented real-time updates, scoring and user engagement features
-- Explored Constraint Layout, a flexible and powerful layout manager in Android development.
+- Built Playing 11 (fantasy cricket app) from scratch in Kotlin/MVVM — UI, Retrofit APIs, Firebase crash reporting, and Facebook/Google social login.
+- Architected Android applications with a security-first mindset — implementing ProGuard obfuscation, runtime permission handling, and secure API communication to protect sensitive user data.

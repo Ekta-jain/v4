@@ -1,14 +1,15 @@
 ---
-date: '2021-07-01'
-title: 'BlackBuck'
+date: '2022-01-01'
+title: 'BlackBuck BOSS'
 github: ''
 external: 'https://bit.ly/blackbuck-android'
 tech:
   - Kotlin
-  - MVVM
-  - Android
+  - Coroutines & Flow
+  - Google Maps API
+  - Hilt
 company: 'BlackBuck'
 showInProjects: true
 ---
 
-BlackBuck is a India's Largest Trucking platfomr - Took initiative for integrating Hilt Dependency Injection on the app, Took full responsibility of few Features(Listed below) and also mentored Juniors.
+Fleet management platform — fleet owners can find loads, purchase GPS & FASTag for multiple trucks. Built the Buy GPS feature with Kotlin Coroutines and Flow, KYC verification flow, trip history, and Google Maps API integration.

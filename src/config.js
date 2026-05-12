@@ -7,10 +7,6 @@ module.exports = {
       url: 'http://github.com/Ekta-jain',
     },
     {
-      name: 'Stack Overflow',
-      url: 'https://stackoverflow.com/users/8052227/andygeek',
-    },
-    {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/droid-ekta-jain/',
     },

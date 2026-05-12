@@ -61,16 +61,24 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Ekta Jain.</h2>;
-  const three = <h3 className="big-heading">I am Unleashing the Power of Android for a Better Tomorrow</h3>;
+  const three = <h3 className="big-heading">Senior Android Engineer building apps for millions.</h3>;
   const four = (
     <>
       <p>
-      With 6 years of expertise in Android development, I specialize in crafting innovative and seamless apps utilizing Java and Kotlin. 
-      Currently, I'm focused on building India's Largest Trucking Platform {' '}
-        <a href="https://bit.ly/blackbuck-android/" target="_blank" rel="noreferrer">
+        9 years in Android — 10+ apps shipped to the Play Store, used by millions. Built across
+        consumer ({' '}
+        <a href="https://www.swiggy.com/" target="_blank" rel="noreferrer">
+          Swiggy
+        </a>
+        ), fleet tech ({' '}
+        <a href="https://www.blackbuck.com/" target="_blank" rel="noreferrer">
           BlackBuck
         </a>
-        .
+        ), and IoT ({' '}
+        <a href="https://www.sears.com/en_us/dap/kenmore-smart-appliances.html" target="_blank" rel="noreferrer">
+          Kenmore
+        </a>
+        ). Kotlin-native, architecture-first, and increasingly pairing that with AI-assisted workflows to ship faster.
       </p>
     </>
   );

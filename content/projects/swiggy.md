@@ -5,10 +5,11 @@ github: ''
 external: 'https://bit.ly/swiggy-android'
 tech:
   - Kotlin
-  - MVVM
-  - Android
+  - Protocol Buffers
+  - Android Profiler
+  - Mockito / JUnit
 company: 'Swiggy'
 showInProjects: true
 ---
 
-Swiggy is a Food Delievry App- I have Worked on Protocol buffers Transformations on Sort/Filter Response, Also Responsible for App Optimization by 20% and Wrote Unit Test Cases with help of Mockito.
+Consumer food delivery app — worked on sort/filter for Restaurant Collection, Home, and Food pages. Used Android Profiler for optimization and achieved 85% unit test coverage using Mockito/JUnit.

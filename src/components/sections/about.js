@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Android', 'Java', 'Kotlin', 'Jetpack Components', 'Compose', 'Unit Testing'];
+  const skills = [‘Kotlin’, ‘Java’, ‘Jetpack Compose’, ‘Coroutines & Flow’, ‘Hilt / DI’, ‘CameraX’, ‘Room’, ‘JUnit / Mockito’, ‘Retrofit’, ‘WorkManager’];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,26 +135,24 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-            Greetings! I am Ekta Jain, a passionate mobile developer driven by the desire to make a difference through technology. 
-            In 2016, I embarked on a journey to master Java and discovered a true love for developing mobile applications that solve real-world problems. 
-            With a focus on innovation and user-centered design, I am dedicated to delivering exceptional mobile experiences. ^-^
+              I’m a Senior Android Engineer with 9 years of experience shipping apps used by millions —
+              across consumer food delivery ({‘ ‘}
+              <a href="https://www.swiggy.com/">Swiggy</a>), fleet logistics ({‘ ‘}
+              <a href="https://www.blackbuck.com/">BlackBuck</a>), and IoT appliance control ({‘ ‘}
+              <a href="https://www.sears.com/en_us/dap/kenmore-smart-appliances.html">Kenmore Smart</a>).
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="http://archiveinfotech.com/">Archive Infotech</a>,{' '}
-              <a href="https://www.octalsoftware.com/">Octal</a>,{' '}
-              <a href="https://www.ranosys.com/in/">Ranosys</a>, and{' '}
-              <a href="https://www.swiggy.com/">Swiggy</a>. My main focus these days is building
-              accessible, revolutionary app,{' '}
-              <a href="https://www.blackbuck.com/">BlackBuck</a> Which can help user to efficiently optimize their route by finding a full truck load through trucking GPS. 
-              and To book loads every day at an affordable price.
+              I wrote an offline MRZ-scanning SDK from scratch using CameraX, cut crash rates by 25%,
+              and pushed unit test coverage to 85% at scale. These days I’m at{‘ ‘}
+              <a href="https://www.searsholdings.com/">Sears Global Technologies</a> leading a team,
+              and increasingly pairing Kotlin-native, architecture-first development with AI-assisted
+              workflows (Windsurf, Antigravity AI) to ship faster while keeping the architecture clean.
             </p>
 
             <p>
-            "Continuous learning is a cornerstone of my development philosophy. 
-            That's why I actively pursue personal projects and share my knowledge and contributions on <a href="http://github.com/Ekta-jain">Github</a>, 
-            staying up-to-date with the latest and trending topics in the Android community.
+              I share projects and contributions on{‘ ‘}
+              <a href="http://github.com/Ekta-jain">GitHub</a> and stay active in the Android community.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
